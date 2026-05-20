@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Update the domain (decorfloors.bg) to match your actual domain before deploying -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <url>
+        <loc>https://decorfloors.bg/</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        <!-- Bulgarian (default) -->
+        <xhtml:link rel="alternate" hreflang="bg"        href="https://decorfloors.bg/"/>
+        <!-- English via query param -->
+        <xhtml:link rel="alternate" hreflang="en"        href="https://decorfloors.bg/?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://decorfloors.bg/"/>
+    </url>
+
+</urlset>
