@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://decorfloors.eu/sitemap.xml
+Sitemap: https://decorfloors.eu/sitemap.txt
 
 # Allow major AI / LLM crawlers to index the site
 User-agent: GPTBot
