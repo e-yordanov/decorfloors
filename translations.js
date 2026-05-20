@@ -77,7 +77,7 @@ const translations = {
         services: {
             sectionLabel:    'Услуги',
             sectionTitle:    'Какво предлагаме',
-            sectionSubtitle: 'Пълен цикъл — от армировъчни работи и изливане до финалното оформяне на повърхността.',
+            sectionSubtitle: 'Пълен цикъл за бетонни настилки — от кофраж и арматура до декоративното оформяне.',
             items: [
                 {
                     icon:  'fas fa-paint-roller',
@@ -92,10 +92,16 @@ const translations = {
                     desc:  'Издръжливи, лесни за поддръжка настилки за промишлени и складови помещения, гаражи и магазини.',
                 },
                 {
-                    icon:  'fas fa-layer-group',
+                    icon:  'fas fa-border-all',
                     color: 'stone',
-                    title: 'Полагане на бетонова настилка',
-                    desc:  'Пълно полагане на бетонова настилка — подготовка на основата, нивелиране, уплътняване и обработка на повърхността преди щамповане или шлайфане.',
+                    title: 'Изработка на кофраж',
+                    desc:  'Кофраж за бетонни плочи и настилки — дворове, алеи, тераси, паркинги и други пространства. Прецизно оформяне на ръбовете и формата на плочата.',
+                },
+                {
+                    icon:  'fas fa-grip-horizontal',
+                    color: 'stone',
+                    title: 'Полагане на арматура',
+                    desc:  'Полагане на армировъчна мрежа или пръти в плочата — за здрава бетонова настилка, устойчива на напукване и натоварване.',
                 },
                 {
                     icon:  'fas fa-truck',
@@ -104,16 +110,16 @@ const translations = {
                     desc:  'Професионално изливане на бетон с правилно уплътняване, дебелина и качество на сместа — здрава основа за всяка бетонова настилка.',
                 },
                 {
-                    icon:  'fas fa-drafting-compass',
-                    color: 'amber',
-                    title: 'Кофражни работи',
-                    desc:  'Изграждане на кофраж за точно оформяне на бетонни плочи — дворове, тераси, подпорни стени и алеи.',
+                    icon:  'fas fa-layer-group',
+                    color: 'stone',
+                    title: 'Полагане на бетонова настилка',
+                    desc:  'Пълно полагане на бетонова настилка — подготовка на основата, нивелиране, уплътняване и обработка на повърхността преди щамповане или шлайфане.',
                 },
                 {
-                    icon:  'fas fa-wrench',
-                    color: 'stone',
-                    title: 'Армировъчни работи',
-                    desc:  'Полагане на армировъчна мрежа или стомана за усилване на конструкцията и предотвратяване на напукване.',
+                    icon:  'fas fa-award',
+                    color: 'amber',
+                    title: 'Професионално изпълнение',
+                    desc:  'Професионално изпълнение с внимание към всеки детайл.',
                 },
             ],
         },
@@ -143,7 +149,7 @@ const translations = {
             sectionLabel:    'Предимства',
             sectionTitle:    'Защо да изберете нас',
             sectionSubtitle: 'Съчетавайте здравина, естетика и функционалност с професионално изпълнение.',
-            adText: 'Получавате модерна настилка, устойчива на время, натоварване и износване — без компромис в качеството.',
+            adText: 'Получавате модерна настилка, устойчива във времето, на натоварване и износване — без компромис в качеството.',
             stamped: {
                 title: 'Предимства на щампования бетон',
                 icon:  'fas fa-paint-roller',
@@ -177,10 +183,10 @@ const translations = {
             sectionTitle:    'Decorfloors',
             sectionSubtitle: 'Специалисти в декоративни бетонни настилки в Русе и региона.',
             p1: 'Decorfloors е специализирана в изграждането на щампован и шлайфан бетон — решения, които съчетават здравина, естетика и дълготрайност. Работим с висококачествени материали и доказани технологии, за да гарантираме отличен резултат при всеки обект.',
-            p2: 'От жилищни дворове и алеи до промишлени халета и паркинги — предлагаме пълен цикъл: кофражни работи, армировка, изливане на бетон, шлайфане и декоративно щамповане. Базирани в Русе, обслужваме клиенти в цяла Северна България и Румъния.',
+            p2: 'От жилищни дворове и алеи до промишлени халета и паркинги — изработка на кофраж за настилки, полагане на арматура, изливане, шлайфане и декоративно щамповане. Базирани в Русе, обслужваме клиенти в цяла Северна България и Румъния.',
             cards: [
                 { icon: 'fas fa-map-marker-alt', title: 'Обслужвани райони', text: 'Русе, Северна България, Румъния' },
-                { icon: 'fas fa-tools',          title: 'Пълен цикъл',       text: 'Кофраж, армировка, изливане, декорация' },
+                { icon: 'fas fa-tools',          title: 'Пълен цикъл',       text: 'Кофраж за настилки, арматура, изливане, декорация' },
                 { icon: 'fas fa-star',           title: 'Качество',          text: 'Висококачествени материали и финиши' },
             ],
         },
@@ -236,7 +242,7 @@ const translations = {
         services: {
             sectionLabel:    'Services',
             sectionTitle:    'What We Offer',
-            sectionSubtitle: 'Full cycle — from reinforcement and pouring to the final decorative surface finish.',
+            sectionSubtitle: 'Full cycle for concrete flooring — from formwork and rebar to the decorative finish.',
             items: [
                 {
                     icon:  'fas fa-paint-roller',
@@ -251,10 +257,16 @@ const translations = {
                     desc:  'Durable, low-maintenance flooring for industrial spaces, garages and shops.',
                 },
                 {
-                    icon:  'fas fa-layer-group',
+                    icon:  'fas fa-border-all',
                     color: 'stone',
-                    title: 'Concrete Flooring Installation',
-                    desc:  'Full installation of concrete flooring — base preparation, levelling, compaction and surface treatment before stamping or polishing.',
+                    title: 'Formwork Fabrication',
+                    desc:  'Formwork for concrete slabs and flooring — yards, driveways, terraces, parking and more. Precise shaping of slab edges and levels.',
+                },
+                {
+                    icon:  'fas fa-grip-horizontal',
+                    color: 'stone',
+                    title: 'Rebar Installation',
+                    desc:  'Laying reinforcement mesh or bars in the slab — for a strong floor resistant to cracking and load.',
                 },
                 {
                     icon:  'fas fa-truck',
@@ -263,16 +275,16 @@ const translations = {
                     desc:  'Professional concrete pouring with proper compaction, thickness and mix quality — a solid base for any concrete floor.',
                 },
                 {
-                    icon:  'fas fa-drafting-compass',
-                    color: 'amber',
-                    title: 'Formwork',
-                    desc:  'Formwork construction for accurate shaping of concrete slabs — yards, terraces, retaining walls.',
+                    icon:  'fas fa-layer-group',
+                    color: 'stone',
+                    title: 'Concrete Flooring Installation',
+                    desc:  'Full installation of concrete flooring — base preparation, levelling, compaction and surface treatment before stamping or polishing.',
                 },
                 {
-                    icon:  'fas fa-wrench',
-                    color: 'stone',
-                    title: 'Reinforcement Works',
-                    desc:  'Laying reinforcement mesh or steel to strengthen the structure and prevent cracking.',
+                    icon:  'fas fa-award',
+                    color: 'amber',
+                    title: 'Professional Execution',
+                    desc:  'Professional execution with attention to every detail.',
                 },
             ],
         },
@@ -336,10 +348,10 @@ const translations = {
             sectionTitle:    'Decorfloors',
             sectionSubtitle: 'Specialists in decorative concrete flooring in Ruse and the region.',
             p1: 'Decorfloors specializes in stamped and polished concrete — solutions that combine durability, aesthetics and longevity. We work with quality materials and proven technologies to guarantee excellent results on every project.',
-            p2: 'From residential yards and driveways to industrial warehouses and parking lots — we offer a full execution cycle: formwork, reinforcement, concrete pouring, polishing and decorative stamping. Based in Ruse, we serve clients throughout Northern Bulgaria and Romania.',
+            p2: 'From residential yards and driveways to industrial warehouses and parking lots — slab formwork, rebar installation, pouring, polishing and decorative stamping. Based in Ruse, we serve clients throughout Northern Bulgaria and Romania.',
             cards: [
                 { icon: 'fas fa-map-marker-alt', title: 'Service Areas',  text: 'Ruse, Northern Bulgaria, Romania' },
-                { icon: 'fas fa-tools',          title: 'Full Cycle',     text: 'Formwork, reinforcement, pouring, decoration' },
+                { icon: 'fas fa-tools',          title: 'Full Cycle',     text: 'Slab formwork, rebar, pouring, decoration' },
                 { icon: 'fas fa-star',           title: 'Quality',        text: 'Premium materials and finishes' },
             ],
         },
