@@ -406,9 +406,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .hero-slide.active { opacity: 1; }
 
+.hero-slide picture,
 .hero-slide img {
     width: 100%;
     height: 100%;
+    display: block;
+}
+
+.hero-slide img {
     object-fit: cover;
     object-position: center;
     pointer-events: none;
@@ -807,13 +812,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     overflow: hidden;
 }
 
+.gallery-item picture,
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform var(--t-slow);
     display: block;
     border-radius: var(--r-md);
+}
+
+.gallery-item img {
+    object-fit: cover;
+    transition: transform var(--t-slow);
 }
 
 .gallery-item:hover img { transform: scale(1.06); }

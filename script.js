@@ -1,5 +1,30 @@
 'use strict';
 
+/* ── Responsive images (WebP + JPEG fallback, built in CI) ── */
+function webpSrc(jpgPath) {
+    return jpgPath.replace(/\.jpe?g$/i, '.webp');
+}
+
+function pictureHtml(jpgPath, alt, loading = 'lazy') {
+    const loadingAttr = loading ? ` loading="${loading}"` : '';
+    return `<picture>
+        <source srcset="${webpSrc(jpgPath)}" type="image/webp">
+        <img src="${jpgPath}" alt="${alt}"${loadingAttr}>
+    </picture>`;
+}
+
+function setPictureImage(pictureOrContainer, jpgPath, alt) {
+    const root = pictureOrContainer.closest?.('picture') || pictureOrContainer;
+    const picture = root.tagName === 'PICTURE' ? root : root.querySelector('picture');
+    const source = picture?.querySelector('source[type="image/webp"]');
+    const img = picture?.querySelector('img') || root.querySelector?.('img');
+    if (source) source.srcset = webpSrc(jpgPath);
+    if (img) {
+        img.src = jpgPath;
+        img.alt = alt;
+    }
+}
+
 /* ═══════════════════════════════════════
    THEME MANAGER
    Reads OS preference; persists choice.
@@ -154,9 +179,7 @@ class LanguageManager {
                 <button class="gallery-item-btn"
                         data-index="${i}"
                         aria-label="${t.catLabels[item.category] || item.category}">
-                    <img src="${item.src}"
-                         alt="${t.catLabels[item.category] || item.category}"
-                         loading="lazy">
+                    ${pictureHtml(item.src, t.catLabels[item.category] || item.category, 'lazy')}
                     <div class="gallery-item-overlay">
                         <span class="gallery-item-label">${t.catLabels[item.category] || item.category}</span>
                         <i class="fas fa-expand-alt"></i>
@@ -306,12 +329,11 @@ class HeroSlider {
         this.slides = this.images.map((src, i) => {
             const slide = document.createElement('div');
             slide.className = 'hero-slide' + (i === 0 ? ' active' : '');
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = '';
-            img.setAttribute('aria-hidden', 'true');
-            if (i > 0) img.setAttribute('loading', 'lazy');
-            slide.appendChild(img);
+            slide.insertAdjacentHTML(
+                'beforeend',
+                pictureHtml(src, '', i > 0 ? 'lazy' : null)
+            );
+            slide.querySelector('img')?.setAttribute('aria-hidden', 'true');
             this.container.appendChild(slide);
             return slide;
         });
@@ -415,6 +437,7 @@ class TypedText {
 class GalleryLightbox {
     constructor() {
         this.overlay   = document.getElementById('gallery-lightbox');
+        this.picture   = document.getElementById('lightbox-picture');
         this.img       = document.getElementById('lightbox-img');
         this.caption   = document.getElementById('lightbox-caption');
         this.closeBtn  = document.getElementById('lightbox-close');
@@ -464,12 +487,18 @@ class GalleryLightbox {
         const item = GALLERY_ITEMS[idx];
         if (!item || !this.img) return;
 
-        this.img.src = item.src;
-        this.img.alt = item.category;
-
         const lang      = window.langMgr ? window.langMgr.current : 'bg';
         const catLabels = translations[lang].gallery.catLabels;
-        if (this.caption) this.caption.textContent = catLabels[item.category] || item.category;
+        const alt       = catLabels[item.category] || item.category;
+
+        if (this.picture) {
+            setPictureImage(this.picture, item.src, alt);
+        } else if (this.img) {
+            this.img.src = item.src;
+            this.img.alt = alt;
+        }
+
+        if (this.caption) this.caption.textContent = alt;
     }
 
     prev() {
