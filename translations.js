@@ -104,12 +104,6 @@ const translations = {
                     desc:  'Полагане на армировъчна мрежа или пръти в плочата — за здрава бетонова настилка, устойчива на напукване и натоварване.',
                 },
                 {
-                    icon:  'fas fa-truck',
-                    color: 'amber',
-                    title: 'Изливане на бетон',
-                    desc:  'Професионално изливане на бетон с правилно уплътняване, дебелина и качество на сместа — здрава основа за всяка бетонова настилка.',
-                },
-                {
                     icon:  'fas fa-layer-group',
                     color: 'stone',
                     title: 'Полагане на бетонова настилка',
@@ -267,12 +261,6 @@ const translations = {
                     color: 'stone',
                     title: 'Rebar Installation',
                     desc:  'Laying reinforcement mesh or bars in the slab — for a strong floor resistant to cracking and load.',
-                },
-                {
-                    icon:  'fas fa-truck',
-                    color: 'amber',
-                    title: 'Concrete Pouring',
-                    desc:  'Professional concrete pouring with proper compaction, thickness and mix quality — a solid base for any concrete floor.',
                 },
                 {
                     icon:  'fas fa-layer-group',
