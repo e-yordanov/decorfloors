@@ -72,6 +72,10 @@ def copy_site_files() -> None:
 
     (DIST / "images").mkdir(parents=True, exist_ok=True)
 
+    nojekyll = ROOT / ".nojekyll"
+    if nojekyll.is_file():
+        shutil.copy2(nojekyll, DIST / ".nojekyll")
+
 
 def optimize_image(src: Path, dest_jpg: Path, dest_webp: Path) -> tuple[int, int]:
     max_edge = HERO_MAX_EDGE if src.name in HERO_FILENAMES else GALLERY_MAX_EDGE
