@@ -35,13 +35,14 @@ const GALLERY_ITEMS = [
 
 /* ── Hero slideshow images ── */
 const HERO_IMAGES = [
-    'images/Полагане на бетонова настилка.jpg',
-    'images/Имитация на камък_(3).jpg',
-    'images/Имитация на плочки_(4).jpg',
-    'images/Имитация на павета_(1).jpg',
-    'images/Имитация на дърво_(2).jpg',
-    'images/Имитация на камък_.jpg',
-    'images/Полагане на бетон_.jpg',
+    "images/Имитация на камък_(5).jpg",
+    "images/Имитация на плочки_(2).jpg",
+    "images/Имитация на камък_(6).jpg",
+    "images/Имитация на дърво_(1).jpg",
+    "images/Имитация на камък_(3).jpg",
+    "images/Имитация на плочки_(4).jpg",
+    "images/Имитация на павета_(1).jpg",
+    "images/Имитация на дърво_(2).jpg",
 ];
 
 const translations = {
